@@ -1,0 +1,168 @@
+*{margin: 0; padding: 0;}
+
+.container{
+    width: 1536px;
+    height: inherit;
+    background: rgba(0, 0, 0, .3);
+    margin: 0 auto;
+}
+
+#wrap{width: 100%;}
+header{
+    width: 100%;
+    height: 100px;
+    background: #ff0;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.mainBanner{
+    width: 100%;
+    height: 90vh;
+    background: yellowgreen;
+}
+.slideIconimg{
+    width: 100%;
+    height: 59px;
+    background: pink;
+    margin-top: 10px;
+}
+section{margin-bottom: 50px;}
+.section1{
+    width: 100%;
+    display: flex;
+    background: palegoldenrod;
+    justify-content: center;
+}
+.section1-left{
+    width: 768px;
+    height: 714px;
+    background: red;
+}
+.section1-right{
+    width: 768px;
+    height: 714px;
+    background: rgb(107, 192, 207);
+}
+.section2{
+    width: 100%;
+    display: flex;
+    background: rgb(142, 181, 231);
+    justify-content: center;
+}
+.section2-left{
+    width: 768px;
+    height: 742px;
+    background: purple;
+}
+.section2-right{
+    width: 768px;
+    height: 742px;
+    background: rgb(51, 53, 77);
+}
+.section2-row1{
+    padding: 0 0 25px 50px; 
+    display: flex; 
+    justify-content: space-between;
+}
+.section2-row2{
+    padding: 25px 0 0 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.section2-imgbox{
+    width: 329px; 
+    height: 344px; 
+    background: skyblue;
+}
+.section2-txtbox{
+    width: 329px; 
+    height: 344px; 
+    background: rgb(189, 119, 221);
+}
+.section3{
+    width: 100%;
+    height: 853px;
+    display: flex;
+}
+.section3-left{
+    width: 50%;
+    height: 100%;
+    background: #ddd;
+}
+.section3-right{
+    width: 50%;
+    height: 100%;
+    background: #3d1b1b;
+}
+.section3-left-box{
+    margin-left: 96px;
+    padding: 50px 50px 50px 96px;
+    box-sizing: border-box;
+    width: 856px;
+    height: 850px;
+    background: yellow;
+}
+.section4{
+    margin: 0 88.5px 50px;
+    padding: 0 96px;
+    height: 660px;
+    background: red;
+    display: flex;
+}
+.section4-ingBox{
+    width: 1182px;
+    height: 660px;
+    background: #000;
+}
+.section4-txtBox{
+    width: 354px;
+    height: 660px;
+    background: #ddd;
+}
+.section4-txtBox .textBox{
+    width: 100%;
+    height: 163px;
+    background: 24px 30px;
+    box-sizing: border-box;
+    background: rgb(61, 223, 83);
+}
+.section4-txtBox .textBox:not(:last-child){
+    margin-bottom: 2px;
+}
+.section5{
+    margin: 0 110px 50px;
+    display: flex;
+    height: 494px;
+    padding: 0 96px;
+    background: yellowgreen;
+    justify-content: space-around;
+}
+.section5-text{
+    width: 472px;
+    height: 402px;
+    background: rgb(50, 122, 230);
+}
+.section5-img{
+    width: 1004px;
+    height: inherit;
+    background: plum;
+}
+.section6{
+    width: 100%;
+    height: 645px;
+    background: yellow;
+}
+.section7{
+    width: 100%;
+    height: 384px;
+    background: #ddd;
+}
+
+footer{
+    width: 100%;
+    height: 175px;
+}
+footer .container{
+    border-top: 1px solid #5a5a5a;
+}
