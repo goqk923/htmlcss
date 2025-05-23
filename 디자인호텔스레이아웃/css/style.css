@@ -1,5 +1,6 @@
-*{margin: 0; padding: 0;}
-
+*{margin: 0;padding: 0;}
+li{list-style: none;}
+a{text-decoration: none; color: #000;}
 .container{
     width: 1536px;
     height: inherit;
@@ -11,21 +12,134 @@
 header{
     width: 100%;
     height: 100px;
-    background: #ff0;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 99;
 }
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+header .container h1{
+    width: 56px;
+    height: 56px;
+}
+header .container h1 img{width: 100%}
+header .container .searchWrap{
+    height: 52px;
+    background: #fff;
+    padding: 6px 6px 6px 19px;
+    border-radius: 40px;
+    box-sizing: border-box;
+}
+header .container .searchWrap ul{
+    display: flex;
+    align-items: center;
+    /* height: 52px; */
+    margin-top: 5px;
+}
+header .container .searchWrap ul li:first-child a{padding-left: 26px;}
+header .container .searchWrap ul li:last-child a{
+    display: inline-block;
+    padding: 5px 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 20px;
+}
+header .container .searchWrap ul li:first-child a::before{
+    width: 16px;
+    height: 16px;
+    content: "";
+    background: url(../img/search.svg) no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+header .container .searchWrap ul li a{
+    display: block;
+    padding: 0px 10px;
+    color: #000;
+    position: relative;
+    text-decoration: none;
+    top: -2px;
+}
+header .container .searchWrap ul li a.leftLine:after{
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 10px;
+    background: #ccc;
+    top: 10px;
+    right: 0;
+}
+header .container nav{
+
+    display: flex;
+}
+header .container nav ul{display: flex;}
+header .container nav ul>li{}
+header .container nav ul>li>a{ 
+    color: #fff; 
+    padding: 0 20px;
+}
+header .container nav ul>li>a svg{fill: #fff;}
+header .container nav button{
+    background: none;
+    padding: 0;
+    border: none;
+    height: 30px;
+    margin-left: 10px;
+}
+
 .mainBanner{
     width: 100%;
     height: 90vh;
-    background: yellowgreen;
+    overflow: hidden;
 }
-.slideIconimg{
+.video-container{}
+.video-wrapper{
     width: 100%;
-    height: 59px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.mainBanner .container{
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.mainBanner .container h2{
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+    color: #fff;
+}
+.slideiconimg{
+    width: 100%;
+    height: 58px;
     background: pink;
     margin-top: 10px;
+}
+.swiper-silde{}
+.swiper-silde>a{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: red;
+    color: #000;
+}
+.swiper-silde>a>svg{
+    margin: 0 auto;
+}
+.swiper-silde>a>span{
+    font-size: 12px;
 }
 section{margin-bottom: 50px;}
 .section1{
@@ -34,20 +148,20 @@ section{margin-bottom: 50px;}
     background: palegoldenrod;
     justify-content: center;
 }
-.section1-left{
+.section-left{
     width: 768px;
     height: 714px;
     background: red;
 }
-.section1-right{
+.section-right{
     width: 768px;
     height: 714px;
-    background: rgb(107, 192, 207);
+    background: rgb(0, 255, 115);
 }
 .section2{
-    width: 100%;
+     width: 100%;
     display: flex;
-    background: rgb(142, 181, 231);
+    background: rgb(182, 170, 238);
     justify-content: center;
 }
 .section2-left{
@@ -58,27 +172,21 @@ section{margin-bottom: 50px;}
 .section2-right{
     width: 768px;
     height: 742px;
-    background: rgb(51, 53, 77);
+    background: rgb(255, 11, 202);
 }
-.section2-row1{
-    padding: 0 0 25px 50px; 
-    display: flex; 
-    justify-content: space-between;
-}
-.section2-row2{
-    padding: 25px 0 0 50px;
-    display: flex;
-    justify-content: space-between;
-}
+.section2-row1{padding: 0 0 25px 50px; 
+    display: flex; justify-content: space-between;}
+.section2-row2{padding: 25px 0 0 50px; 
+    display: flex; justify-content: space-between;}
 .section2-imgbox{
-    width: 329px; 
-    height: 344px; 
+    width: 329px;
+    height: 344px;
     background: skyblue;
 }
 .section2-txtbox{
-    width: 329px; 
-    height: 344px; 
-    background: rgb(189, 119, 221);
+    width: 329px;
+    height: 344px;
+    background: rgb(235, 135, 197);
 }
 .section3{
     width: 100%;
@@ -87,20 +195,20 @@ section{margin-bottom: 50px;}
 }
 .section3-left{
     width: 50%;
-    height: 100%;
+    height: inherit;
     background: #ddd;
 }
 .section3-right{
     width: 50%;
-    height: 100%;
-    background: #3d1b1b;
+    height: inherit;
+    background: #8f6980;
 }
 .section3-left-box{
     margin-left: 96px;
     padding: 50px 50px 50px 96px;
     box-sizing: border-box;
     width: 856px;
-    height: 850px;
+    height: 853px;
     background: yellow;
 }
 .section4{
@@ -110,7 +218,7 @@ section{margin-bottom: 50px;}
     background: red;
     display: flex;
 }
-.section4-ingBox{
+.section4-imgBox{
     width: 1182px;
     height: 660px;
     background: #000;
@@ -123,9 +231,9 @@ section{margin-bottom: 50px;}
 .section4-txtBox .textBox{
     width: 100%;
     height: 163px;
-    background: 24px 30px;
+    padding: 24px 30px;
     box-sizing: border-box;
-    background: rgb(61, 223, 83);
+    background: orange;
 }
 .section4-txtBox .textBox:not(:last-child){
     margin-bottom: 2px;
@@ -136,12 +244,12 @@ section{margin-bottom: 50px;}
     height: 494px;
     padding: 0 96px;
     background: yellowgreen;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .section5-text{
     width: 472px;
     height: 402px;
-    background: rgb(50, 122, 230);
+    background: blue;
 }
 .section5-img{
     width: 1004px;
@@ -152,17 +260,42 @@ section{margin-bottom: 50px;}
     width: 100%;
     height: 645px;
     background: yellow;
+    margin-bottom: 50px;
 }
 .section7{
     width: 100%;
     height: 384px;
     background: #ddd;
 }
-
 footer{
     width: 100%;
-    height: 175px;
-}
+    height: 175px;}
 footer .container{
-    border-top: 1px solid #5a5a5a;
+        border-top: 1px solid #666;
+}
+
+@media screen and (max-width: 1536px){
+    .container{
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;        
+        }
+}
+
+@media screen and (max-width: 1200px){
+    header .container .searchWrap{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    }
+}
+header .container .searchWrap a{
+    font-style: 12px;
+}
+
+@media screen and (max-width: 1000px){
+    header .container .searchWrap{
+    display: none;
+    }
 }
